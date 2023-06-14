@@ -1,1 +1,537 @@
+/* Google Fonts */
 
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Changa:wght@200&family=Genos:wght@100&family=Poiret+One&family=Varela+Round&display=swap');
+
+/*
+
+    font-family: 'Acme', sans-serif; // Headings
+
+    font-family: 'Changa', sans-serif; // Project Card Title
+    
+    font-family: 'Genos', sans-serif; // Footer
+
+    font-family: 'Poiret One', cursive; // Navbar
+
+    font-family: 'Varela Round', sans-serif; // Paragraphs
+
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+section {
+    scroll-margin-top: 83px;
+}
+
+/* Styling for navbar */
+
+nav {
+    font-family: 'Changa', sans-serif;
+    font-size: 1.6rem;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    text-align: center;
+    height: 80px;
+    width: 100%;
+    background: #ddd;
+    box-shadow: 0 0 12px #363945;
+    background-size: 300%;
+    background-image: linear-gradient(45deg, #C3447A, #0072B5, #C3447A);
+    animation: bg-animation 30s infinite;
+}
+
+@keyframes bg-animation {
+  0% {background-position: left}
+  50% {background-position: right}
+  100% {background-position: left}
+}
+
+nav ul {
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: whitesmoke;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-shadow: 1px 0 0 black;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#navbar a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transition: .5s;
+}
+  
+.checkbtn {
+    font-size: 30px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 0 black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px){
+
+    nav ul li a {
+      font-size: 16px;
+    }
+  
+}
+  
+@media (max-width: 858px){
+
+    .checkbtn {
+      display: block;
+    }
+
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: rgba(160,153,152,0.87);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+
+    nav ul li a {
+      font-size: 20px;
+      color: #34568B;
+    }
+
+    a:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    #check:checked ~ ul {
+      left: 0;
+    }
+
+}
+
+/* Styling for about/welcome-section */
+
+#welcome-section {
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Changa', sans-serif;
+    color: #000;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    text-align: left;
+    position: relative;
+    font-size: 2.5rem;
+    width: max-content;
+}
+
+h1::before,
+h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+h1::before {
+    background: whitesmoke;
+    animation: typewriter 6s steps(24) 1s forwards;
+}
+
+h1::after {
+    width: 7px;
+    height: 80px;
+    background: black;
+    animation: typewriter 6s steps(24) 1s forwards, blink 750ms steps(24) infinite;
+}
+
+@keyframes typewriter {
+    to {
+      left: 100%;
+    }
+}
+  
+@keyframes blink {
+    to {
+      background: transparent;
+    }
+}
+
+.name-title {
+    color: #C3447A;
+    text-shadow: 2px 0 0 #000;
+}
+
+.description {
+    color: #0072B5;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 55px;
+    font-family: 'Varela Round', sans-serif;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(6s + 1s) forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.about-img {
+    position: relative;
+}
+
+.about-img > img {
+    position: absolute;
+    max-width: 100%;
+    right: 35px;
+    box-shadow: 18px 20px 0 #C3447A, 19px 20px 20px rgba(54,57,69,0.72);
+}
+
+@media screen and (max-width:1085px) {
+    
+    h1 {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1.7rem;
+    }
+
+    h1::before,
+    h1::after {
+        height: 60px;
+        overflow: hidden;
+    }
+
+    .description  {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .about-img > img {
+        top: 60px;
+        margin-bottom: 25px;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+    
+    h1 {
+        font-size: 1.3rem;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    h1::before,
+    h1::after {
+        height: 40px;
+        overflow: hidden;
+    }
+
+    .description {
+        margin-left: 18px;
+        font-size: 0.84rem;
+    }
+
+    .about-img > img {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+/* Styles for all headings */
+
+.sec-heading {
+    position: relative;
+    text-align: center;
+    font-family: 'Varela Round', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.target-sec {
+    color: #C3447A;
+    text-shadow: 2px 0 0 #000;
+}
+
+/* Styling for project section */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+    grid-gap: 2rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+}
+
+.card {
+    background-image: url(https://pbs.twimg.com/profile_images/1276770212927410176/qTgTIejk_400x400.jpg);
+    background-size: cover;
+    width: 100%;
+    padding: clamp(1.5rem, 20vh, 10rem) 0 0;
+    color: transparent;
+    box-shadow: 0 0 7px rgb(0 0 0 / 0.2);
+    transition: transform ease 250ms;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body h2 {
+    color: white;
+    text-shadow: 1px 0 0 #0072B5;
+    font-family: 'Changa', sans-serif;
+    font-size: 1rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+    background: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.46) 15%, rgb(0 0 0 / 1));
+}
+
+.card-body p {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 0.8rem;
+    color: white;
+    margin-bottom: 1.25em;
+    margin-top: 1.25em;
+}
+
+.project-tile {
+    position: relative;
+    width: max-content;
+}
+
+@media (hover: hover), (prefers-reduced-motion: no-preference) {
+    
+  .card-body {
+     transform: translateY(60%);
+     transition: transform 500ms ease;
+  }
+
+  .card:hover .card-body {
+     transform: translateY(0);
+     transition-delay: 500ms;
+  }
+
+  .card-body > *:not(.project-tile) {
+     opacity: 0;
+     transition: opacity 1200ms linear 400ms;
+  }
+
+  .card:hover .card-body > *:not(.project-tile) {
+     opacity: 1;
+  }
+
+  .project-tile::after {
+     content: "";
+     position: absolute;
+     left: -1.5rem;
+     top: 100%;
+     height: 3px;
+     width: calc(100% + 1.5rem);
+     background: linear-gradient(90deg, #0072B5, #C3447A);
+     transform: scaleX(0);
+     transition: transform 200ms ease;
+     transform-origin: left;
+  }
+
+  .card:hover .project-tile::after {
+     transition: transform 500ms ease-in-out;
+     transform: scaleX(1);
+  }
+
+}
+
+.button {
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'Changa', sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background: linear-gradient(270deg, #0072B5, #C3447A);
+  padding: 0.5em 1.25em;
+  border-radius: 7px;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, rgba(0,114,181,0.69), rgba(195,68,122,0.59) );
+}
+
+/* Styling skills section */
+
+.container {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+   
+}
+
+.prog-label {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    color: #363945;
+    margin: 18px 0 5px 0;
+}
+
+.prog-bar-container {
+    width: 100%;
+    height: 22px;
+    background-color: #bbb;
+    border-radius: 6px;
+    box-shadow: 0 4px 3px #aaa inset;
+    position: relative;
+}
+
+.prog-bar {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(90deg, #939597 ,/*#363945*/ blue 25%);
+    border-radius: 6px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+p > .fab {
+    font-size: 1.3rem;
+}
+
+.fa-html5 {
+    color: #FA7A35;
+}
+
+.fa-css3-alt {
+    color: #0072B5;
+}
+
+.fa-js {
+    color: #FAE03C;
+    text-shadow: 0 1px 3px #363945;
+}
+
+.fa-python {
+    color:#034F84;
+}
+
+.prog-label > img {
+    max-width: 100%;
+    width: 24px;
+    border-radius: 5px;
+}
+
+/* Styling contact section */
+
+.links-parent {
+    margin: 0 0 50px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.links-li {
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+.links-fcc {
+    color: #000;
+    text-shadow: 1px 0 0 #363945;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.links-fcc:hover {
+    color: #363945;
+    transition: 0.5s;
+}
+
+.links-fcc > .fab {
+    font-size: 1.275rem;
+}
+
+.fa-facebook-f {
+    color: #3b5998;
+}
+
+.fa-github {
+    color: #171515;
+}
+
+.fa-free-code-camp {
+    color: #0a0a22;
+}
+
+/* Styling footer */
+
+.footer-div {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Genos', sans-serif; 
+    font-weight: bold;
+    background-color: rgba(10,10,34,0.927);
+    color: whitesmoke;
+}
+
+.fa-copyright {
+    color: white;
+}
+
+.fa-exclamation {
+    color: tomato;
+}
