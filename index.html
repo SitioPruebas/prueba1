@@ -1,201 +1,101 @@
-<head>
-   <title>Título de la página</title>
+<style>
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
 
- <link rel="stylesheet" href="estilos.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
-<body>
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}.snowflake:nth-of-type(12){left:12%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(13){left:30%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(14){left:25%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(15){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(16){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(17){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(18){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(19){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(10){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(21){left:40%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(22){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(23){left:70%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+</style>
+
+<header>
+  <nav id="navbar">
+    <h1 class="brand">ElectroNath</h1>
+    <ul>
+      <li>
+        <a href="https://github.com/electronath" class="menu-item" target="_blank" id="profile-link">
+          GitHub
+        </a>    
+      </li>
+      <li><a href="#projects" class="menu-item">Portfolio</a></li>
+      <li><a href="#contact" class="menu-item">Contact</a></li>
+    </ul>
+  </nav>
+  
+  
+  <div>
+<!-- SNOWFLAKE CODE      -->
+    <div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  <div class="snowflake">.</div>
+  <div class="snowflake">*</div>
+  
+</div>
     
-   <!-- Navbar -->
- 
-   <nav id="navbar">
-     <!-- Menu icon, visible for tablet and mobile devices -->
-
-     <input type="checkbox" id="check">
-     <label for="check" class="checkbtn">
-         <i class="fas fa-bars"></i>
-     </label>
-
-     <!-- Navbar links -->
-
-     <ul>
-         <li>
-             <a href="#"> Inicio </a>
-         </li>
-         <li>
-             <a href="#welcome-section"> Acerca de mi </a>
-         </li>
-         <li>
-             <a href="#projects"> Emotes </a>
-         </li>
-         <li>
-             <a href="#skills"> Juegos </a>
-         </li>
-         <li>
-             <a href="#contact"> Contact </a>
-         </li>
-     </ul>
-   </nav>
-
-   <!-- About/Welcome section -->
-
-   <section id="welcome-section">
-           <br>
-           <h1 id="title-text"> 
-               Hi, my name is <span class="name-title">Emmanuel</span>.
-           </h1>
-           <div class="about-img">
-              <img src="https://media.istockphoto.com/photos/smiling-female-architect-sitting-at-her-office-desk-picture-id1287459398?b=1&k=20&m=1287459398&s=170667a&w=0&h=BjeqitY069dkW6EKDYNZYR8GLDqrL_tzrlmw70lJZ1c=" 
-              alt="Girl with laptop">
-           </div>
-           <p class="description">
-             ¡Hola a todos! Soy Emmanuel, pero me conocen en el mundo de los videojuegos como ManyGamer. 
-         <br>Soy un apasionado streamer en Twitch que adora compartir mi pasión por los juegos 
-
-
-
-           </p>
-   </section>
- 
-   <!-- Projects section -->
+<!--SNOWFLAKES CODE      -->
+    
+    
+  <section id="welcome-section">
+    <h1>Hey I am Nathan</h1>
+    <p><em>Web Dev. & ML Eng.</em></p>
+  </section>
    
-   <section id="projects">
-         <h2 class="sec-heading"> Mis <span class="target-sec"> Emotes </span> Suscribte a mi Twich </h2>
-        
-            <div class="grid">
-                 <div class="card">
-                     <div class="card-body">
-                         <h2 class="project-tile"> Tribute Page </h2>
-                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga placeat odio pariatur doloribus sint?</p>
-                          <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" class="button" target="_blank"> Full screen view </a>
-                     </div>
-                 </div>
-               
-                 <div class="card">
-                      <div class="card-body">
-                         <h2 class="project-tile"> Random Quote Machine </h2>
-                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga placeat odio pariatur doloribus sint?</p>
-                         <a href="https://codepen.io/freeCodeCamp/full/qRZeGZ" class="button" target="_blank"> Full screen view </a>
-                      </div>
-                 </div>
+</div>
+</header>
 
-                 <div class="card">
-                    <div class="card-body">
-                       <h2 class="project-tile"> Landing Page </h2>
-                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga placeat odio pariatur doloribus sint?</p>
-                       <a href="https://codepen.io/freeCodeCamp/full/RKRbwL" class="button" target="_blank"> Full screen view </a>
-                    </div>
-                 </div>
 
-                 <div class="card">
-                     <div class="card-body">
-                         <h2 class="project-tile"> Survey Form </h2>
-                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga placeat odio pariatur doloribus sint?</p>
-                         <a href="https://codepen.io/freeCodeCamp/full/VPaoNPZ" class="button" target="_blank"> Full screen view </a>
-                     </div>
-                 </div>
-               
-                 <div class="card">
-                     <div class="card-body">
-                         <h2 class="project-tile"> Javascript Calculator </h2>
-                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga placeat odio pariatur doloribus sint?</p>
-                         <a href="https://codepen.io/freeCodeCamp/full/wgGVVX" class="button" target="_blank"> Full screen view </a>
-                     </div>
-                 </div>
-               
-                 <div class="card">
-                     <div class="card-body">
-                         <h2 class="project-tile"> Tic Tac Toe Game </h2>
-                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga placeat odio pariatur doloribus sint?</p>
-                         <a href="https://codepen.io/freeCodeCamp/full/KzXQgy" class="button" target="_blank"> Full screen view </a>
-                     </div>
-                 </div>
-           </div>
-   </section>
-    
-   <!-- Skills section -->
-
-   <section id="skills">
-     <h2 class="sec-heading"> My <span class="target-sec"> Juegos</span> </h2>
-        <div class="container">
-         <li>
-             <p class="prog-label"> 
-                 <i class="fa fa-fighter-jet"></i> Warzone
-             </p> 
-             <div class="prog-bar-container"> 
-                 <div class="prog-bar"></div> 
-             </div> 
-         </li>
-
-         <li>
-             <p class="prog-label">
-                 <i class="fa fa-gamepad"></i> FORTNITE
-             </p>
-             <div class="prog-bar-container"> 
-                 <div class="prog-bar"></div> 
-             </div> 
-         </li>
-
-         <li>
-             <p class="prog-label">
-                 <i class="fa fa-futbol-o"></i> Fifa
-             </p>
-             <div class="prog-bar-container"> 
-                 <div class="prog-bar"></div> 
-             </div> 
-         </li>
-
-         <li>
-             <p class="prog-label">
-                 <i class="fab fa-python"></i> Python
-             </p>
-             <div class="prog-bar-container"> 
-                 <div class="prog-bar"></div> 
-             </div> 
-         </li>
-
-         <li>
-             <p class="prog-label">
-                 <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/hjixnzui1nhq3trfcwx8" alt="Adobe XD logo">
-                 Adobe XD
-             </p>
-             <div class="prog-bar-container"> 
-                 <div class="prog-bar"></div> 
-             </div> 
-         </li>
-        </div>
-   </section>
-
-   <!-- Contact section -->
-
-   <section id="contact">
-     <h2 class="sec-heading"> <span class="target-sec"> Contact</span> for Hiring me </h2>
-      <div class="links-parent">
-         <li class="links-li">
-             <a href="https://www.facebook.com/freecodecamp" target="_blank" class="links-fcc">
-                 <i class="fab fa-facebook-f"></i> Facebook
-             </a>
-         </li>
-         <li class="links-li">
-             <a href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" class="links-fcc">
-<i class="fa fa-play" aria-hidden="true"></i> Youtube
-         </li>
-         <li class="links-li">
-             <a href="https://www.freecodecamp.org/fcc5a5769b2-6b18-4d70-acd8-92a33a2f110e" target="_blank" id="profile-link" class="links-fcc">
-<i class="fa-brands fa-twitch"></i>ssd         </li>
-     </div>
-   </section>
-
-   <!-- Footer section -->
-
-   <footer>
-       <div class="footer-div">
-           <p>
-             <i class="far fa-copyright"></i> Alexa 2022. All rights reserved.
-           </p>
-           <p>
-             <i class="fas fa-exclamation"></i> This is fake portfolio for project, data/links etc are not mine.
-           </p>
-       </div>
-   </footer>
-</body>
+<section id="projects">
+  <h2>Projects</h2>
+  
+  <div class="project project-tile">
+    <img src="https://s.tmimgcdn.com/scr/48800/photographer-portfolio-responsive-wordpress-theme_48843-original.jpg?width=1024&height=1146" alt="">
+    <h3 class="project-title"><a href="#">Dearest Diary</a></h3>
+  </div>
+  
+  <div class="project">
+    <img src="https://i.pinimg.com/originals/24/31/af/2431af5f34d0c0fde741b433e891b925.jpg" alt="">
+    <h3 class="project-title">Dearest Diary</h3>
+  </div>
+  
+  <div class="project">
+    <img src="https://i.pinimg.com/originals/10/fe/ab/10feab3fdb42493d22bb194be3cbd055.jpg" alt="">
+    <h3 class="project-title">Dearest Diary</h3>
+  </div>
+  
+  <div class="project">
+    <img src="https://i.pinimg.com/736x/46/d3/2f/46d32f6a915a945b2dce2f69ec869aa1.jpg" alt="">
+    <h3 class="project-title">Dearest Diary</h3>
+  </div>
+  
+  <div class="project">
+    <img src="https://www.theme-junkie.com/wp-content/uploads/3380-ideabuz-material-design-wordpress-theme-large.png" alt="">
+    <h3 class="project-title">Dearest Diary</h3>
+  </div>
+  
+  <div class="project">
+    <img src="https://bit.ly/3vzR9ZO" alt="">
+    <h3 class="project-title">Dearest Diary</h3>
+  </div>
+  
+</section>
